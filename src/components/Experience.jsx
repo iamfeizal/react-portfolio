@@ -11,7 +11,7 @@ export const Experiences = () => {
         whileInView="visible"
         initial="hidden"
         transition="transition"
-        className='my-20 text-center text-4xl'>Experience</motion.h2>
+        className='my-20 text-center text-4xl'><span className='text-neutral-500'>Relevant</span> Experience</motion.h2>
         <div>
             {EXPERIENCES.map((experience, index) => (
                 <div key={index} className='mb-8 flex flex-wrap lg:justify-center'>
@@ -30,7 +30,7 @@ export const Experiences = () => {
                     transition="transition"
                     className="w-full max-w-xl lg:-3/4">
                         <h6 className='mb-2 font-semibold'>
-                            {experience.role} - <span className='text-sm text-pink-100'>{experience.company}</span>
+                            {experience.role} - <span className='text-sm text-pink-100 font-black'>{experience.company}</span>
                         </h6>
                         <p className='mb-4 text-neutral-400'>{experience.descripction}</p>
                         <div>

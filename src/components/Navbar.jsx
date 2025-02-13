@@ -6,10 +6,10 @@ const Navbar = () =>  {
         <div className="flex flex-shrink-0 items-center ">
             <img className="mx-2 w-10" src="https://via.placeholder.com/150" alt="logo"/></div>
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-          <FaGithub />
-          <FaInstagram />
-          <FaLinkedin />
-          <FaKaggle />
+          <a href="github.com/iamfeizal"><FaGithub /></a>
+          <a href="instagram.com/immamfsl_"><FaInstagram /></a>
+          <a href="linkedin.com/in/imam-af"><FaLinkedin /></a>
+          <a href="kaggle.com/imamaf"><FaKaggle /></a>
         </div>
     </nav>
   )

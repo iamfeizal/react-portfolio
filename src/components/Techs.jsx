@@ -1,6 +1,4 @@
-import { RiReactjsLine } from "react-icons/ri"
-import { TbBrandNextjs } from "react-icons/tb"
-import { SiMongodb } from "react-icons/si"
+import { SiPython, SiTensorflow, SiOpencv, SiScikitlearn, SiPytorch, SiStreamlit, SiNumpy, SiPandas, SiDjango, SiFlutter } from "react-icons/si"
 import { motion } from "motion/react"
 import { containerTop } from "../constants/animations"
 
@@ -36,42 +34,70 @@ const Techs = () => {
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <RiReactjsLine className="text-5xl text-cyan-400"/>
+                <SiPython className="text-5xl"/>
             </motion.div>
             <motion.div
             variants={iconVariants(5)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <TbBrandNextjs className="text-5xl"/>
+                <SiTensorflow className="text-5xl text-orange-400"/>
             </motion.div>
             <motion.div
             variants={iconVariants(3)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <SiMongodb className="text-5xl text-green-500"/>
+                <SiOpencv className="text-5xl"/>
             </motion.div>
             <motion.div
-            variants={iconVariants(6)}
+            variants={iconVariants(2)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <RiReactjsLine className="text-5xl text-cyan-400"/>
+                <SiScikitlearn className="text-5xl"/>
             </motion.div>
             <motion.div
             variants={iconVariants(4)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <TbBrandNextjs className="text-5xl"/>
+                <SiPytorch className="text-5xl text-orange-400"/>
+            </motion.div>
+            <motion.div
+            variants={iconVariants(5)}
+            initial="initial"
+            animate="animate"
+            className="rounded-2xl border-4 border-neutral-800 p-2">
+                <SiStreamlit className="text-5xl text-red-500"/>
             </motion.div>
             <motion.div
             variants={iconVariants(3)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <SiMongodb className="text-5xl text-green-500"/>
+                <SiNumpy className="text-5xl"/>
+            </motion.div>
+            <motion.div
+            variants={iconVariants(4)}
+            initial="initial"
+            animate="animate"
+            className="rounded-2xl border-4 border-neutral-800 p-2">
+                <SiPandas className="text-5xl"/>
+            </motion.div>
+            <motion.div
+            variants={iconVariants(3)}
+            initial="initial"
+            animate="animate"
+            className="rounded-2xl border-4 border-neutral-800 p-2">
+                <SiDjango className="text-5xl"/>
+            </motion.div>
+            <motion.div
+            variants={iconVariants(2)}
+            initial="initial"
+            animate="animate"
+            className="rounded-2xl border-4 border-neutral-800 p-2">
+                <SiFlutter className="text-5xl text-cyan-500"/>
             </motion.div>
         </motion.div>
     </div>

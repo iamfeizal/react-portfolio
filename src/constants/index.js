@@ -1,56 +1,67 @@
-export const HERO = 'lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia nesciunt aspernatur reprehenderit neque eos ea sit architecto labore tenetur magni ducimus, rerum nihil eum recusandae voluptatibus aut dignissimos amet.'
+export const HERO = 'Hello There!.'
 
-export const ABOUT = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia nesciunt aspernatur reprehenderit neque eos ea sit architecto labore tenetur magni ducimus, rerum nihil eum recusandae voluptatibus aut dignissimos amet.'
+export const ABOUT = 'Freshgraduate bachelor of information system and ML enthusiast.'
 
 export const EXPERIENCES = [
     {
-        role: 'Frontend Developer',
-        company: 'Google',
-        descripction: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia nesciunt aspernatur reprehenderit neque eos ea sit architecto labore tenetur magni ducimus, rerum nihil eum recusandae voluptatibus aut dignissimos amet.',
-        year: '2019 - 2020',
-        skills: ['React', 'Vue', 'Angular']
+        role: 'Software Engineer Intern (Machine Learning Specialization) ',
+        company: 'PT. Stechoq Robotika Indonesia',
+        descripction: 'Developed a device based on Pan Flute, equipped with AI to convert audio input and automatically play it. This device uses UDP port to communicate with Festo PLC Controller. Created business pitch deck presentation.',
+        year: 'Feb 2024 - Jun 2024',
+        skills: ['React', 'Vue', 'Angular'],
+        link: 'https://github.com'
     },
     {
-        role: 'Frontend Developer',
-        company: 'Google',
-        descripction: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia nesciunt aspernatur reprehenderit neque eos ea sit architecto labore tenetur magni ducimus, rerum nihil eum recusandae voluptatibus aut dignissimos amet.',
-        year: '2019 - 2020',
-        skills: ['React', 'Vue', 'Angular']
+        role: 'Laboratory Assistant',
+        company: 'Universitas Pembangunan Nasional “Veteran” Yogyakarta',
+        descripction: 'Taught practicum classes ranging from technical classes such as Fundamentals of Programming, Data Structures, Mobile Programming, etc. to management classes such as Requirements Engineering and IT Project Management. Graded problem sets and exams.',
+        year: 'Feb 2022 - Jun 2024',
+        skills: ['React', 'Vue', 'Angular'],
+        link: 'https://github.com'
     },
     {
-        role: 'Frontend Developer',
-        company: 'Google',
-        descripction: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia nesciunt aspernatur reprehenderit neque eos ea sit architecto labore tenetur magni ducimus, rerum nihil eum recusandae voluptatibus aut dignissimos amet.',
-        year: '2019 - 2020',
-        skills: ['React', 'Vue', 'Angular']
+        role: 'Machine Learning Cohort',
+        company: 'Bangkit Academy 2023 led by Google, Tokopedia, Gojek, & Traveloka',
+        descripction: 'Developed a mobile application with machine learning to get food nutrition from API with image classification based on image input using TensorFlow Lite and MobileNet. Created business pitch deck presentation.',
+        year: 'Feb 2023 - Aug 2023',
+        skills: ['React', 'Vue', 'Angular'],
+        link: 'https://github.com'
+    },
+    {
+        role: 'Google Data Analytics Specialization',
+        company: 'Baparekrat Digital Talent Scholarship',
+        descripction: 'Studied data analytics specialization from Data Cleaning, Data Analysis, Data Visualizaion, Efective Presentation to Data driven Decision Making',
+        year: 'Oct 2022 - Dec 2022',
+        skills: ['React', 'Vue', 'Angular'],
+        link: 'https://github.com'
     },
 ]
 
 export const PROJECTS = [
     {
-        title: 'Portfolio Website',
+        title: 'Automatic CCTV Attendance System',
         image: 'https://via.placeholder.com/150',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia nesciunt aspernatur reprehenderit neque eos ea sit architecto labore tenetur magni ducimus, rerum nihil eum recusandae voluptatibus aut dignissimos amet.',
+        description: 'Improve the attendance system by implementing an automatic attendance system on CCTV using the Haar Cascade Classifier algorithm and FaceNet machine learning model with the highest accuracy of 89.92%',
         skills: ['React', 'TailwindCSS'],
         link: 'https://github.com'
     },
     {
-        title: 'Portfolio Website',
+        title: 'VEMD Pan Flute Project',
         image: 'https://via.placeholder.com/150',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia nesciunt aspernatur reprehenderit neque eos ea sit architecto labore tenetur magni ducimus, rerum nihil eum recusandae voluptatibus aut dignissimos amet.',
+        description: 'Creating machine learning that detects and converts pitch data based on audio input with Spotify Basic-Pitch machine learning model, post-process it with a custom algoritm, and sends the byte data via UDP port to the PLC.',
         skills: ['React', 'TailwindCSS'],
         link: 'https://github.com'
     },
     {
-        title: 'Portfolio Website',
+        title: 'CaloryIn Project',
         image: 'https://via.placeholder.com/150',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia nesciunt aspernatur reprehenderit neque eos ea sit architecto labore tenetur magni ducimus, rerum nihil eum recusandae voluptatibus aut dignissimos amet.',
+        description: 'Creating machine learning model to get food nutrition from National Agricultural Library USDA (United States Department of Agriculture) with image classification for mobile application using TensorFlow Lite and MobileNetV2.',
         skills: ['React', 'TailwindCSS'],
         link: 'https://github.com'
     },
 ]
 
 export const CONTACT = {
-    address: 'Jl. Lorem ipsum, magni ducimus, rerum nihil, dignissimos amet.',
+    address: 'Klaten, Central Java, Indonesia.',
     email: 'imamagusfaisal120@gmail.com'
 }
