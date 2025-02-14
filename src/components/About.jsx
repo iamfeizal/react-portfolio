@@ -10,7 +10,7 @@ const About = () =>  {
         whileInView="visible"
         initial="hidden"
         transition="transition"
-        className="my-20 text-center text-4xl">
+        className="my-10 text-center text-4xl">
             About
             <span className="text-neutral-500"> Me</span>
         </motion.h2>
@@ -22,7 +22,7 @@ const About = () =>  {
             transition="transition"
             className="w-full lg:w-1/2 lg:p-8">
                 <div className="flex items-center justify-center">
-                    <img className="rounded-2xl" src="https://via.placeholder.com/150" alt="About" />
+                    <img className="rounded-2xl" width={250} height={250} src="/src/assets/about.png" alt="About" />
                 </div>
             </motion.div>
             <motion.div

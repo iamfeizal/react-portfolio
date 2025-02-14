@@ -34,7 +34,7 @@ const Techs = () => {
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <SiPython className="text-5xl"/>
+                <SiPython className="text-5xl text-yellow-400"/>
             </motion.div>
             <motion.div
             variants={iconVariants(5)}
@@ -55,42 +55,42 @@ const Techs = () => {
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <SiScikitlearn className="text-5xl"/>
+                <SiScikitlearn className="text-5xl text-orange-400"/>
             </motion.div>
             <motion.div
             variants={iconVariants(4)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <SiPytorch className="text-5xl text-orange-400"/>
+                <SiPytorch className="text-5xl text-red-500"/>
             </motion.div>
             <motion.div
             variants={iconVariants(5)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <SiStreamlit className="text-5xl text-red-500"/>
+                <SiStreamlit className="text-5xl text-red-700"/>
             </motion.div>
             <motion.div
             variants={iconVariants(3)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <SiNumpy className="text-5xl"/>
+                <SiNumpy className="text-5xl text-cyan-600"/>
             </motion.div>
             <motion.div
             variants={iconVariants(4)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <SiPandas className="text-5xl"/>
+                <SiPandas className="text-5xl text-indigo-900"/>
             </motion.div>
             <motion.div
             variants={iconVariants(3)}
             initial="initial"
             animate="animate"
             className="rounded-2xl border-4 border-neutral-800 p-2">
-                <SiDjango className="text-5xl"/>
+                <SiDjango className="text-5xl text-emerald-600"/>
             </motion.div>
             <motion.div
             variants={iconVariants(2)}

@@ -1,6 +1,6 @@
 export const HERO = 'Hello There!.'
 
-export const ABOUT = 'Freshgraduate bachelor of information system and ML enthusiast.'
+export const ABOUT = 'I\'m an Fresh Graduate Information System Student with passion in Machine Learning and Data Science with various Non-Professional project experiences both Individual and Team. Over my career development, I have a track record of leading and implementing various projects from student activities unit to laboratory assistants and internship projects. I\'am deeply committed to expanding my skill set and currently active participating in various trainings to develop my hard and soft skills.'
 
 export const EXPERIENCES = [
     {
