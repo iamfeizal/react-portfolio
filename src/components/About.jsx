@@ -1,4 +1,5 @@
 import { ABOUT } from "../constants"
+import aboutPic from "../assets/about.png"
 import { motion } from "motion/react"
 import { containerLeft, containerRight, containerTop } from "../constants/animations"
 
@@ -22,7 +23,7 @@ const About = () =>  {
             transition="transition"
             className="w-full lg:w-1/2 lg:p-8">
                 <div className="flex items-center justify-center">
-                    <img className="rounded-2xl" width={250} height={250} src="/src/assets/about.png" alt="About" />
+                    <img className="rounded-2xl" width={250} height={250} src={aboutPic} alt="About" />
                 </div>
             </motion.div>
             <motion.div

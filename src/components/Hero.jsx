@@ -1,4 +1,6 @@
 import { motion } from "motion/react"
+import profilePic from "../assets/profile.png"
+import cv from "../assets/CV_ImamAF_Short.pdf"
 import { containerLeft, containerRight } from "../constants/animations"
 import { useTypewriter, Cursor } from "react-simple-typewriter"
 
@@ -12,7 +14,7 @@ const Hero = () =>  {
     });
 
     const onButtonClick = () => {
-        const pdfUrl = "/src/assets/CV_ImamAF_Short.pdf";
+        const pdfUrl = "../assets/CV_ImamAF_Short.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
         link.download = "CV_ImamAF.pdf";
@@ -60,6 +62,18 @@ const Hero = () =>  {
                     className="my-10 max-w-xl bg-transparent hover:bg-cyan-500 text-cyan-300 font-semibold hover:text-neutral-300 py-2 px-4 border border-cyan-300 hover:border-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 rounded inline-flex">
                         Download CV
                     </motion.button>
+                    <a href={cv}>
+                        <motion.button
+                        type="button"
+                        onClick={onButtonClick}
+                        variants={containerLeft(1)}
+                        whileInView="visible"
+                        initial="hidden"
+                        transition="transition"
+                        className="my-10 max-w-xl bg-transparent hover:bg-cyan-500 text-cyan-300 font-semibold hover:text-neutral-300 py-2 px-4 border border-cyan-300 hover:border-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 rounded inline-flex">
+                            CV
+                        </motion.button>
+                    </a>
                 </div>
             </div>
             <div className="w-full lg:w-1/2 lg:p-8">
@@ -69,7 +83,7 @@ const Hero = () =>  {
                     whileInView="visible"
                     initial="hidden"
                     transition="transition"
-                    className="rounded-2xl" src="/src/assets/profile.png" alt="Imam Agus Faisal" />
+                    className="rounded-2xl" src={profilePic} alt="Imam Agus Faisal" />
                 </div>
             </div>
         </div>
