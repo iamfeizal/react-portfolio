@@ -40,7 +40,7 @@ const Hero = () =>  {
                     initial="hidden"
                     transition="transition"
                     className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">
-                        [ {text}<span className="text-cyan-300"><Cursor cursorStyle='|'/></span> ]
+                        [ {text}<span className="text-cyan-300"><Cursor cursorStyle='|'/></span>]
                     </motion.span>
                     <a href={cv} target="_blank">
                         <motion.button
