@@ -1,5 +1,5 @@
 import { ABOUT } from "../constants"
-import aboutPic from "../assets/about.png"
+import aboutPic from "../assets/images/about.png"
 import { motion } from "motion/react"
 import { containerLeft, containerRight, containerTop } from "../constants/animations"
 

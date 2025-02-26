@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import profilePic from "../assets/profile.png"
+import profilePic from "../assets/images/profile.png"
 import cv from "../assets/CV_ImamAF_Short.pdf"
 import { containerLeft, containerRight } from "../constants/animations"
 import { useTypewriter, Cursor } from "react-simple-typewriter"

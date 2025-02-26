@@ -43,24 +43,28 @@ export const EXPERIENCES = [
     },
 ]
 
+import cctvImage from '../assets/images/cctv.png';
+import vemdImage from '../assets/images/vemd.png';
+import caloryinImage from '../assets/images/caloryin.png';
+
 export const PROJECTS = [
     {
         title: 'Automatic CCTV Attendance System',
-        image: 'https://via.placeholder.com/150',
+        image: cctvImage,
         description: 'Improve the attendance system by implementing an automatic attendance system on CCTV using the Haar Cascade Classifier algorithm and FaceNet machine learning model with the highest accuracy of 89.92%',
         skills: ['Django', 'OpenCV', 'FaceNet', 'Haar Cascade Classifier', 'RTSP'],
         link: 'https://github.com/iamfeizal/django-cctv-auto-attendance-system'
     },
     {
         title: 'VEMD Pan Flute Project',
-        image: 'https://via.placeholder.com/150',
+        image: vemdImage,
         description: 'Creating machine learning that detects and converts pitch data based on audio input with Spotify Basic-Pitch machine learning model, post-process it with a custom algoritm, and sends the byte data via UDP port to the PLC.',
         skills: ['Streamlit', 'Spotify Basic Pitch', 'UDP', 'PLC'],
-        link: 'https://github.com'
+        link: 'https://github.com/iamfeizal/streamlit-vemd-pan-flute-nayanika'
     },
     {
         title: 'CaloryIn Project',
-        image: 'https://via.placeholder.com/150',
+        image: caloryinImage,
         description: 'Creating machine learning model to get food nutrition from National Agricultural Library USDA (United States Department of Agriculture) with image classification for mobile application using TensorFlow Lite and MobileNetV2.',
         skills: ['DeepLearning', 'TensorFlow Lite', 'MobileNet'],
         link: 'https://github.com/CaroluceRickyHarkrisN/CaloryIn'
