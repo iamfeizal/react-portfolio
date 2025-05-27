@@ -1,4 +1,4 @@
-import logo from "../../public/logo.svg";
+import logo from "../assets/logo.svg";
 import { FaGithub, FaInstagram, FaLinkedin, FaKaggle } from "react-icons/fa";
 
 const Navbar = () =>  {

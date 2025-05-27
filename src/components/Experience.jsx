@@ -3,7 +3,7 @@ import { EXPERIENCES } from '../constants'
 import { motion } from 'motion/react'
 import { containerLeft, containerRight, containerTop } from '../constants/animations'
 
-export const Experiences = () => {
+const Experiences = () => {
   return (
     <div className='border-b border-neutral-800 pb-4'>
         <motion.h2
