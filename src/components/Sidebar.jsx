@@ -11,13 +11,8 @@ const Sidebar = () => {
 
   return (
     <div className='h-screen'>
-      <nav className='h-full flex flex-col border-r'>
+      <nav className='h-full flex flex-col border-r border-gray-400'>
         <div className="p-4 pb-2 flex justify-between items-center">
-
-          {/* <div className={`bg-cyan-900 p-5 pt-8 h-screen ${open ? "w-72" : "w-20"} duration-300 relative`}>
-            <LuChevronFirst className={`bg-white text-black text-3xl rounded-full absolute -right-3 top-9 border-1 border-black cursor-pointer ${!open && "rotate-180"}`} onClick={() => setOpen(!open)}></LuChevronFirst>
-          </div> */}
-          {/* <img src={logo} className={`${open ? "w-10" : "w-0 h-10"}`} alt="" /> */}
           <div></div>
 
           <button className='p-1.5 rounded-lg border border-cyan-300 text-cyan-300 hover:bg-cyan-300 hover:text-neutral-800 cursor-pointer' onClick={() => setOpen(!open)}>
@@ -46,7 +41,7 @@ const Sidebar = () => {
               {!open && <div className={`absolute left-full rounded-md px-2 py-1 ml-6 bg-white text-neutral-900 text-sm invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0`}>Back</div>}
           </div>
         </ul>
-        <div className="border-t flex p-3">
+        <div className="flex p-3 border-t border-gray-400">
           <img src={logo} className='w-10 h-10 rounded-md' alt="" />
           <div className={`flex justify-between items-center overflow-hidden transition-all ${open ? "w-52 ml-3" : "w-0"}`}>
             <div className="leading-4">
