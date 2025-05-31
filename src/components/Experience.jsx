@@ -23,8 +23,12 @@ export const Experiences = () => {
                             initial="hidden"
                             transition="transition"
                             className='w-full lg:w-1/4'>
-                                <p className='mb-2 text-sm text-neutral-400'>{experience.year}</p>
+                                <p className='lg:text-right mb-2 text-sm text-neutral-400'>{experience.year}</p>
                             </motion.div>
+                            <div className='mx-10 hidden lg:block'>
+                                <div className="-ml-1 size-3 rounded-full bg-cyan-500"></div>
+                                <div className='w-0.5 h-full bg-gray-700'></div>
+                            </div>
                             <motion.div
                             variants={containerRight(0)}
                             whileInView="visible"
@@ -37,7 +41,7 @@ export const Experiences = () => {
                                 <p className='mb-4 text-neutral-400'>{experience.descripction}</p>
                                 <div>
                                     {experience.skills.map((skill, index) => (
-                                        <span key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800'>{skill}</span>
+                                        <span key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-cyan-500'>{skill}</span>
                                     ))}
                                 </div>
                             </motion.div>
@@ -46,39 +50,6 @@ export const Experiences = () => {
                 </div>
             ))}
         </div>
-        <ol className="relative space-y-8 before:absolute before:top-0 before:left-1/3 before:h-full before:w-0.5 before:-translate-x-1/2 before:rounded-full before:bg-gray-200 dark:before:bg-gray-700">
-        {EXPERIENCES.map((experience, index) => (
-            <div key={index}>
-            <a href={experience.link}>
-                <li className="relative grid grid-cols-3 me-4">
-                    <div
-                    className="relative flex items-start gap-4 flex-row order-last"
-                    >
-                    <span className="size-3 shrink-0 rounded-full bg-blue-600"></span>
-
-                    <div className="-mt-2">
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-white">{experience.company}</h3>
-
-                        <p className="mt-0.5 text-sm text-gray-700 dark:text-gray-200">
-                        {experience.descripction}
-                        </p>
-                    </div>
-                    </div>
-
-                    <div className='text-right -mt-1 me-3'>
-                    <motion.div
-                            variants={containerLeft(0)}
-                            whileInView="visible"
-                            initial="hidden"
-                            transition="transition">
-                                <p className='text-sm text-neutral-400'>{experience.year}</p>
-                            </motion.div>
-                    </div>
-                </li>
-            </a>
-            </div>
-            ))}
-        </ol>
     </div>
   )
 }
