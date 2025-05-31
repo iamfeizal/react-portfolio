@@ -23,8 +23,12 @@ export const Experiences = () => {
                             initial="hidden"
                             transition="transition"
                             className='w-full lg:w-1/4'>
-                                <p className='mb-2 text-sm text-neutral-400'>{experience.year}</p>
+                                <p className='lg:text-right mb-2 text-sm text-neutral-400'>{experience.year}</p>
                             </motion.div>
+                            <div className='mx-10 hidden lg:block'>
+                                <div className="-ml-1 size-3 rounded-full bg-cyan-500"></div>
+                                <div className='w-0.5 h-full bg-gray-700'></div>
+                            </div>
                             <motion.div
                             variants={containerRight(0)}
                             whileInView="visible"
@@ -37,7 +41,7 @@ export const Experiences = () => {
                                 <p className='mb-4 text-neutral-400'>{experience.descripction}</p>
                                 <div>
                                     {experience.skills.map((skill, index) => (
-                                        <span key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800'>{skill}</span>
+                                        <span key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-cyan-500'>{skill}</span>
                                     ))}
                                 </div>
                             </motion.div>
