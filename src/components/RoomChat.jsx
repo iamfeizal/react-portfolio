@@ -28,10 +28,11 @@ const RoomChat = () => {
               <div className={`
                 px-4 py-3 rounded-lg prose prose-invert max-w-full break-words overflow-wrap
                 ${msg.sender === 'user' 
-                  ? 'bg-cyan-500 text-white rounded-br-none' 
+                  ? 'bg-neutral-800 text-white rounded-br-none border-1 border-cyan-300' 
                   : 'bg-neutral-800 text-white rounded-bl-none'}
               `}>
-                <ReactMarkdown>{msg.text}</ReactMarkdown>
+                {/* <ReactMarkdown>{msg.text}</ReactMarkdown> */}
+                <p style={{ marginTop: "0px" }} dangerouslySetInnerHTML={{ __html: msg.text }}></p>
               </div>
             </div>
           </div>
@@ -44,7 +45,7 @@ const RoomChat = () => {
       <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         <div className='flex items-center justify-between p-4 bg-gray-800 text-white gap-2 rounded-2xl'>
             <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" className='outline-none sm:w-65 md:w-125 lg:w-250' placeholder='Enter a prompt here'/>
-            <div className='flex items-center'>
+            <div className='flex items-center justify-center hover:text-cyan-300 hover:scale-120'>
               <AnimatePresence initial={false}>
                 {input?
                 <motion.div
@@ -52,7 +53,7 @@ const RoomChat = () => {
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0 }}
                       >
-                  <FiSend className='text-2xl img-search' onClick={()=>onSent()}/>
+                  <FiSend className='text-2xl' onClick={()=>onSent()}/>
                 </motion.div>
                 :null}
               </AnimatePresence>

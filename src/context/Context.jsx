@@ -23,9 +23,10 @@ const ContextProvider = (props) => {
   };
 
   const onSent = async (prompt) => {
+    setInput("");
+    setResultData(""); // clear temp result text
     setLoading(true);
     setShowResult(true);
-    setResultData(""); // clear temp result text
 
     const userPrompt = prompt ?? input;
 
@@ -41,12 +42,11 @@ const ContextProvider = (props) => {
       setChatHistory((prev) => [...prev, { sender: "bot", text: response }]);
       setResultData(response);
     } catch (error) {
-      const errorMsg = "Terjadi kesalahan saat memproses permintaan.";
+      const errorMsg = "Can\'t connect to the server :(";
       setChatHistory((prev) => [...prev, { sender: "bot", text: errorMsg }]);
       setResultData(errorMsg);
     }
 
-    setInput("");
     setLoading(false);
   };
 
