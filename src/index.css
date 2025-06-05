@@ -4,3 +4,11 @@
 :root {
   font-family: "Inter", serif;
 }
+
+.interactive-bg-blue {
+  @apply hover:bg-cyan-300 focus:bg-cyan-300 active:bg-cyan-300 hover:text-neutral-800 focus:text-neutral-800 active:text-neutral-800;
+}
+
+.interactive-bg-white {
+  @apply hover:bg-white focus:bg-white active:bg-white hover:text-neutral-900 focus:text-neutral-900 active:text-neutral-900;
+}
