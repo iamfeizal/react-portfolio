@@ -1,61 +1,190 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="hrBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#020617" />
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
     </linearGradient>
-    <linearGradient id="purplePink" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#818cf8" />
-      <stop offset="50%" stop-color="#c084fc" />
-      <stop offset="100%" stop-color="#f472b6" />
+
+    <!-- Purple-Indigo-Pink Accent Gradient -->
+    <linearGradient id="hrPurplePink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
     </linearGradient>
-    <linearGradient id="hrGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05" />
+
+    <!-- Bar Gradients -->
+    <linearGradient id="bar1Grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#6366f1" />
     </linearGradient>
-    <filter id="blurGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
+    <linearGradient id="bar2Grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2e1065" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="bar3Grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#083344" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="bar4Grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#500724" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <linearGradient id="bar5Grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <!-- Spline Area Fill Gradient -->
+    <linearGradient id="splineArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Ambient Backdrop Radial Glow -->
+    <radialGradient id="hrAmbientGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#ec4899" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#0b0f19" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="hrShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+
+    <filter id="hrNeonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="300" height="300" rx="24" fill="url(#hrBgGrad)" stroke="#1e293b" stroke-width="2" />
-  <rect x="8" y="8" width="284" height="284" rx="18" fill="url(#hrGlow)" stroke="url(#purplePink)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.6" />
+  <!-- Background Base Canvas -->
+  <rect width="400" height="400" rx="32" fill="url(#hrBgGrad)" />
 
-  <!-- Central Graphic: Dashboard & Analytics Graph -->
-  <g transform="translate(150, 115)">
-    <!-- Glow circle -->
-    <circle r="46" fill="#7c3aed" opacity="0.15" filter="url(#blurGlow)" />
-    
-    <!-- Dashboard Window Outline -->
-    <rect x="-42" y="-36" width="84" height="68" rx="8" fill="#0f172a" stroke="url(#purplePink)" stroke-width="2" />
-    <!-- Top Bar -->
-    <line x1="-42" y1="-22" x2="42" y2="-22" stroke="#334155" stroke-width="1.5" />
-    <circle cx="-32" cy="-29" r="2.5" fill="#f43f5e" />
-    <circle cx="-24" cy="-29" r="2.5" fill="#eab308" />
-    <circle cx="-16" cy="-29" r="2.5" fill="#22c55e" />
-
-    <!-- Chart Bars -->
-    <rect x="-30" y="5" width="8" height="18" rx="2" fill="#38bdf8" />
-    <rect x="-18" y="-5" width="8" height="28" rx="2" fill="#818cf8" />
-    <rect x="-6" y="-14" width="8" height="37" rx="2" fill="#c084fc" />
-    <rect x="6" y="-2" width="8" height="25" rx="2" fill="#f472b6" />
-    <rect x="18" y="-9" width="8" height="32" rx="2" fill="#22d3ee" />
-
-    <!-- Trend line -->
-    <path d="M -26 3 L -14 -8 L -2 -17 L 10 -4 L 22 -12" fill="none" stroke="#facc15" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="22" cy="-12" r="3" fill="#facc15" />
+  <!-- Background Grid Lines -->
+  <g opacity="0.07" stroke="#a855f7" stroke-width="1">
+    <line x1="40" y1="0" x2="40" y2="400" />
+    <line x1="120" y1="0" x2="120" y2="400" />
+    <line x1="200" y1="0" x2="200" y2="400" />
+    <line x1="280" y1="0" x2="280" y2="400" />
+    <line x1="360" y1="0" x2="360" y2="400" />
+    <line x1="0" y1="60" x2="400" y2="60" />
+    <line x1="0" y1="140" x2="400" y2="140" />
+    <line x1="0" y1="220" x2="400" y2="220" />
+    <line x1="0" y1="300" x2="400" y2="300" />
+    <line x1="0" y1="380" x2="400" y2="380" />
   </g>
 
-  <!-- Typography -->
-  <text x="150" y="210" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" letter-spacing="0.5">
-    HR Analytics Dashboard
-  </text>
-  <text x="150" y="234" text-anchor="middle" fill="#c084fc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" letter-spacing="1">
-    METABASE • POSTGRESQL • ML
-  </text>
-  <text x="150" y="262" text-anchor="middle" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="11">
-    Employee Churn & Retention Model
-  </text>
+  <!-- Ambient Glow Center -->
+  <circle cx="200" cy="180" r="165" fill="url(#hrAmbientGlow)" />
+
+  <!-- Outer Glass Frame -->
+  <rect x="12" y="12" width="376" height="376" rx="24" fill="none" stroke="url(#hrPurplePink)" stroke-width="1.5" opacity="0.4" />
+
+  <!-- MAIN GRAPHIC: Glassmorphic HR Analytics Dashboard Window -->
+  <g transform="translate(48, 55)" filter="url(#hrShadow)">
+    
+    <!-- Window Body Frame -->
+    <rect x="0" y="0" width="304" height="235" rx="16" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="2" />
+    <rect x="0" y="0" width="304" height="235" rx="16" fill="none" stroke="url(#hrPurplePink)" stroke-width="1" opacity="0.35" />
+
+    <!-- Window Header Bar -->
+    <rect x="0" y="0" width="304" height="34" rx="16" fill="#1e293b" fill-opacity="0.8" />
+    <path d="M 0 34 L 304 34" stroke="#334155" stroke-width="1" />
+
+    <!-- Window Traffic Light Dots -->
+    <circle cx="20" cy="17" r="4.5" fill="#f43f5e" />
+    <circle cx="34" cy="17" r="4.5" fill="#fbbf24" />
+    <circle cx="48" cy="17" r="4.5" fill="#22c55e" />
+
+    <!-- Header Title Pill -->
+    <rect x="78" y="7" width="148" height="20" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <circle cx="90" cy="17" r="3" fill="#a855f7" />
+    <text x="100" y="21" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="9" font-weight="700">HR Analytics • ML Retention</text>
+
+    <!-- Header Live Badge -->
+    <rect x="238" y="8" width="52" height="18" rx="9" fill="#064e3b" stroke="#10b981" stroke-width="0.8" />
+    <circle cx="248" cy="17" r="2.5" fill="#34d399" />
+    <text x="256" y="20.5" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700">METABASE</text>
+
+    <!-- TOP ROW: KPI METRIC CARDS -->
+    <!-- Card 1: Retention Rate -->
+    <g transform="translate(14, 46)">
+      <rect x="0" y="0" width="86" height="42" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+      <text x="8" y="14" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7.5" font-weight="600">RETENTION</text>
+      <text x="8" y="32" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="800">94.8%</text>
+      <rect x="54" y="6" width="26" height="13" rx="6.5" fill="#065f46" />
+      <text x="67" y="15" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="7" font-weight="700">+4.2%</text>
+    </g>
+
+    <!-- Card 2: Churn Risk Prediction -->
+    <g transform="translate(108, 46)">
+      <rect x="0" y="0" width="88" height="42" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+      <text x="8" y="14" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7.5" font-weight="600">CHURN RISK</text>
+      <text x="8" y="32" fill="#ec4899" font-family="system-ui, sans-serif" font-size="14" font-weight="800">LOW</text>
+      <rect x="46" y="6" width="34" height="13" rx="6.5" fill="#701a75" />
+      <text x="63" y="15" text-anchor="middle" fill="#f472b6" font-family="system-ui, sans-serif" font-size="7" font-weight="700">AI MODEL</text>
+    </g>
+
+    <!-- Card 3: Model Accuracy -->
+    <g transform="translate(204, 46)">
+      <rect x="0" y="0" width="86" height="42" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+      <text x="8" y="14" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7.5" font-weight="600">ACCURACY</text>
+      <text x="8" y="32" fill="#a855f7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">91.4%</text>
+      <rect x="54" y="6" width="26" height="13" rx="6.5" fill="#3b0764" />
+      <text x="67" y="15" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="7" font-weight="700">ML ROC</text>
+    </g>
+
+    <!-- MAIN CHART AREA -->
+    <g transform="translate(14, 98)">
+      <!-- Chart Inner Canvas -->
+      <rect x="0" y="0" width="276" height="122" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1" />
+
+      <!-- Horizontal Grid Lines -->
+      <line x1="16" y1="28" x2="260" y2="28" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+      <line x1="16" y1="56" x2="260" y2="56" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+      <line x1="16" y1="84" x2="260" y2="84" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+      <line x1="16" y1="106" x2="260" y2="106" stroke="#334155" stroke-width="1" />
+
+      <!-- Bar Columns (Cohort Analysis) -->
+      <rect x="30" y="60" width="18" height="46" rx="4" fill="url(#bar1Grad)" />
+      <rect x="72" y="42" width="18" height="64" rx="4" fill="url(#bar2Grad)" />
+      <rect x="114" y="24" width="18" height="82" rx="4" fill="url(#bar3Grad)" />
+      <rect x="156" y="50" width="18" height="56" rx="4" fill="url(#bar4Grad)" />
+      <rect x="198" y="32" width="18" height="74" rx="4" fill="url(#bar5Grad)" />
+      <rect x="240" y="16" width="18" height="90" rx="4" fill="url(#bar2Grad)" />
+
+      <!-- Smooth Area Under Prediction Curve -->
+      <path d="M 39 70 C 75 50, 110 32, 123 20 C 145 12, 175 42, 207 28 C 225 18, 240 12, 249 10 L 249 106 L 39 106 Z" 
+            fill="url(#splineArea)" />
+
+      <!-- Neon Trend Line (Predictive Retention Curve) -->
+      <path d="M 39 70 C 75 50, 110 32, 123 20 C 145 12, 175 42, 207 28 C 225 18, 240 12, 249 10" 
+            fill="none" stroke="#facc15" stroke-width="2.5" stroke-linecap="round" filter="url(#hrNeonGlow)" />
+
+      <!-- Chart Data Nodes -->
+      <circle cx="39" cy="70" r="3.5" fill="#facc15" stroke="#0f172a" stroke-width="1.5" />
+      <circle cx="123" cy="20" r="3.5" fill="#facc15" stroke="#0f172a" stroke-width="1.5" />
+      <circle cx="207" cy="28" r="3.5" fill="#facc15" stroke="#0f172a" stroke-width="1.5" />
+      <circle cx="249" cy="10" r="4.5" fill="#38bdf8" stroke="#0f172a" stroke-width="2" />
+      <circle cx="249" cy="10" r="8" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.6" />
+
+      <!-- Tooltip Tag on Peak Node -->
+      <g transform="translate(195, -5)">
+        <rect x="0" y="0" width="58" height="18" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+        <text x="29" y="12" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700">RET: 96.2%</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- BOTTOM SLEEK LABEL PILL -->
+  <g transform="translate(200, 350)">
+    <rect x="-120" y="-16" width="240" height="32" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <circle cx="-100" cy="0" r="5" fill="#a855f7" />
+    <text x="-85" y="4.5" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.5">HR ANALYTICS</text>
+    <rect x="22" y="-8" width="82" height="16" rx="8" fill="#a855f7" opacity="0.2" />
+    <text x="63" y="3.5" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="8.5" font-weight="800">POSTGRES • ML</text>
+  </g>
 </svg>

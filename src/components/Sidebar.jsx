@@ -16,41 +16,41 @@ const Sidebar = () => {
         <div className="p-4 pb-2 flex justify-between items-center">
           <div></div>
 
-          <button className='p-1.5 rounded-lg border border-cyan-300 text-cyan-300 interactive-bg-blue cursor-pointer' onClick={() => setOpen(!open)}>
-            <LuChevronFirst className={`text-2xl duration-500 ${!open && "rotate-180"}`}/>
+          <button className='p-2 rounded-full border border-cyan-300 text-cyan-300 interactive-bg-blue cursor-pointer hover:scale-105 active:scale-95 transition-all shadow-sm' onClick={() => setOpen(!open)}>
+            <LuChevronFirst className={`text-xl duration-500 ${!open && "rotate-180"}`}/>
           </button>
         </div>
 
-        <ul className='flex-1 px-3 py-10'>
+        <ul className='flex-1 px-3 py-10 space-y-2'>
           <a href={cv} target="_blank">
-            <li className={`relative flex items-center justify-center py-2 px-3 my-2 font-medium rounded-md cursor-pointer group transition-colors text-cyan-300 interactive-bg-blue hover:scale-105`}>
-              <FaRegFilePdf className='text-2xl' />
+            <li className={`relative flex items-center justify-center py-2.5 px-3 font-medium rounded-xl cursor-pointer group transition-all text-cyan-300 interactive-bg-blue hover:scale-105`}>
+              <FaRegFilePdf className='text-xl' />
               <span className={`overflow-hidden transition-all whitespace-nowrap ${open ? "w-52 ml-3" : "w-0"}`}>Download CV</span>
 
-              {!open && <div className={`absolute left-full rounded-md px-2 py-1 ml-6 bg-cyan-300 text-neutral-900 text-sm invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0 whitespace-nowrap`}>Download CV</div>}
+              {!open && <div className={`absolute left-full rounded-xl px-3 py-1.5 ml-6 bg-cyan-300 text-neutral-900 text-xs font-semibold shadow-lg invisible opacity-0 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0 whitespace-nowrap`}>Download CV</div>}
             </li>
           </a>
-          <li className={`relative flex items-center justify-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer group transition-colors text-neutral-300 interactive-bg-white hover:scale-105`} onClick={() => setActive(!active)}>
-            <FiMail className='text-2xl' />
+          <li className={`relative flex items-center justify-center py-2.5 px-3 font-medium rounded-xl cursor-pointer group transition-all text-neutral-300 interactive-bg-white hover:scale-105`} onClick={() => setActive(!active)}>
+            <FiMail className='text-xl' />
             <span className={`overflow-hidden transition-all ${open ? "w-52 ml-3" : "w-0"}`}>Contact</span>
 
-            {!open && <div className={`absolute left-full rounded-md px-2 py-1 ml-6 bg-white text-neutral-900 text-sm invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0`}>Contact</div>}
+            {!open && <div className={`absolute left-full rounded-xl px-3 py-1.5 ml-6 bg-white text-neutral-900 text-xs font-semibold shadow-lg invisible opacity-0 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0`}>Contact</div>}
           </li>
-          <hr className='my-3 text-gray-400 pb-5' />
-          <li className={`relative flex items-center justify-center py-2 px-3 my-2 font-medium rounded-md cursor-pointer group transition-colors text-neutral-300 interactive-bg-white hover:scale-105`} onClick={() => navigate("/")}>
-              <FaArrowLeft className='text-1xl' />
+          <hr className='my-3 border-neutral-700 pb-2' />
+          <li className={`relative flex items-center justify-center py-2.5 px-3 font-medium rounded-xl cursor-pointer group transition-all text-neutral-300 interactive-bg-white hover:scale-105`} onClick={() => navigate("/")}>
+              <FaArrowLeft className='text-lg' />
               <span className={`overflow-hidden transition-all ${open ? "w-52 ml-3" : "w-0"}`}>Back</span>
 
-              {!open && <div className={`absolute left-full rounded-md px-2 py-1 ml-6 bg-white text-neutral-900 text-sm invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0`}>Back</div>}
+              {!open && <div className={`absolute left-full rounded-xl px-3 py-1.5 ml-6 bg-white text-neutral-900 text-xs font-semibold shadow-lg invisible opacity-0 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0`}>Back</div>}
           </li>
         </ul>
         <a href="mailto:imamagusfaisal120@gmail.com" target='_blank'>
-          <div className="flex p-3 border-t border-gray-400">
-              <img src={logo} className='w-10 h-10 rounded-md' alt="" />
+          <div className="flex p-3 border-t border-neutral-700/80 items-center">
+              <img src={logo} className='w-10 h-10 rounded-xl p-1 bg-neutral-900 border border-neutral-700' alt="" />
               <div className={`flex justify-between items-center overflow-hidden transition-all ${open ? "w-52 ml-3" : "w-0"}`}>
                 <div className="leading-4">
-                  <h4 className='font-semibold'>Imam Agus Faisal</h4>
-                  <span className='text-xs text-gray-400'>imamagusfaisal120@gmail.com</span>
+                  <h4 className='font-semibold text-sm'>Imam Agus Faisal</h4>
+                  <span className='text-xs text-neutral-400'>imamagusfaisal120@gmail.com</span>
                 </div>
               </div>
           </div>

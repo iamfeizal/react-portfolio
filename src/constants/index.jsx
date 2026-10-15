@@ -4,12 +4,12 @@ export const EXPERIENCES = [
     {
         role: 'Software Engineer (Flutter Developer)',
         company: 'Dinas Komunikasi Informatika dan Persandian Kota Yogyakarta',
-        badge: '1 Year Exp • 100k+ Downloads',
+        badge: '100k+ Downloads',
         description: '1+ years of real working experience developing and maintaining the Jogja Smart Service (JSS) mobile application for iOS and Android with 100k+ downloads. Leading mobile feature development, bug fixes, performance optimizations, and integration of the JSS AI Chatbot. Collaborating closely with Business Analysts and Information System Designers to deliver impactful digital public services.',
         descripction: '1+ years of real working experience developing and maintaining the Jogja Smart Service (JSS) mobile application for iOS and Android with 100k+ downloads. Leading mobile feature development, bug fixes, performance optimizations, and integration of the JSS AI Chatbot. Collaborating closely with Business Analysts and Information System Designers to deliver impactful digital public services.',
         year: 'Aug 2025 – Present',
         skills: ['Flutter', 'Dart', '100k+ Downloads', 'iOS & Android', 'AI Chatbot', 'State Management', 'Cross-functional Collaboration'],
-        link: 'https://kominfosan.jogjakota.go.id/'
+        link: 'https://dinkominfosan.jogjakota.go.id/'
     },
     {
         role: 'Software Engineer Intern (Machine Learning Specialization)',
@@ -81,8 +81,32 @@ import vemdImage from '../assets/images/vemd.png';
 import caloryinImage from '../assets/images/caloryin.png';
 import portfolioAiImage from '../assets/images/portfolio-ai.svg';
 import hrAnalyticsImage from '../assets/images/hr-analytics.svg';
+import jssAppImage from '../assets/images/jss-app.svg';
+import simParkirImage from '../assets/images/sim-parkir.svg';
+import ocrPlateImage from '../assets/images/ocr-plate.svg';
 
 export const PROJECTS = [
+    {
+        title: 'Jogja Smart Service (JSS) Mobile App',
+        image: jssAppImage,
+        description: 'Maintained and developed major features for the official Yogyakarta City super-app with 100,000+ downloads on Google Play Store and App Store. Built with Flutter, supporting citizen services, modular service architecture, and high performance.',
+        skills: ['Flutter', 'Dart', '100k+ Downloads', 'iOS & Android', 'REST API', 'Public Service'],
+        link: 'https://play.google.com/store/apps/details?id=id.go.jogjakota.jogjasmartservice&pcampaignid=web_share'
+    },
+    {
+        title: 'SIM Parkir (JSS Integrated Parking System)',
+        image: simParkirImage,
+        description: 'Engineered the digital parking management service (SIM Parkir) within Jogja Smart Service. Integrated cashless Payment Gateway, automated parking calculation, and seamless Bluetooth Thermal Printer hardware connectivity for parking attendants.',
+        skills: ['Flutter', 'Dart', 'Payment Gateway', 'Bluetooth Thermal Printer', 'Hardware Integration', 'Mobile POS'],
+        link: 'https://play.google.com/store/apps/details?id=id.go.jogjakota.jogjasmartservice&pcampaignid=web_share'
+    },
+    {
+        title: 'License Plate Recognition OCR Service',
+        image: ocrPlateImage,
+        description: 'Developed an end-to-end vehicle license plate OCR inference service using PaddleOCR, packaged with Docker, and served asynchronously via Uvicorn and Flask with interactive Swagger documentation.',
+        skills: ['Python', 'PaddleOCR', 'Docker', 'Uvicorn', 'Flask', 'Computer Vision', 'Microservices'],
+        link: 'http://10.24.16.61:8000/docs'
+    },
     {
         title: 'CCTV Auto Attendance',
         image: cctvImage,

@@ -67,7 +67,7 @@ const RoomChat = () => {
 
         <button
           onClick={newChat}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-neutral-300 hover:text-white bg-neutral-800/80 hover:bg-neutral-800 border border-neutral-700/60 hover:border-cyan-400/40 transition-all cursor-pointer shadow-sm active:scale-95"
+          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-neutral-300 hover:text-white bg-neutral-800/80 hover:bg-neutral-800 border border-neutral-700/60 hover:border-cyan-400/40 transition-all cursor-pointer shadow-sm active:scale-95"
           title="Reset percakapan"
         >
           <FiRotateCcw className="text-sm text-cyan-400" />
@@ -83,7 +83,7 @@ const RoomChat = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-2xl mx-auto my-4 p-6 rounded-2xl bg-gradient-to-b from-neutral-900/90 to-neutral-900/40 border border-neutral-800 shadow-xl"
+            className="max-w-2xl mx-auto my-4 p-6 rounded-3xl bg-gradient-to-b from-neutral-900/90 to-neutral-900/40 border border-neutral-800 shadow-xl"
           >
             <div className="flex items-center gap-2 text-cyan-300 text-sm font-medium mb-2">
               <LuSparkles className="text-base" />
@@ -106,7 +106,7 @@ const RoomChat = () => {
                     key={idx}
                     onClick={() => handlePromptClick(prompt)}
                     disabled={loading}
-                    className="text-xs text-left px-3 py-2 rounded-xl bg-neutral-800/90 hover:bg-cyan-950/60 text-neutral-200 hover:text-cyan-200 border border-neutral-700 hover:border-cyan-400/50 transition-all cursor-pointer shadow-sm active:scale-95 disabled:opacity-50"
+                    className="text-xs text-left px-3.5 py-2 rounded-full bg-neutral-800/90 hover:bg-cyan-950/60 text-neutral-200 hover:text-cyan-200 border border-neutral-700 hover:border-cyan-400/50 transition-all cursor-pointer shadow-sm active:scale-95 disabled:opacity-50"
                   >
                     💬 {prompt}
                   </button>
@@ -153,8 +153,8 @@ const RoomChat = () => {
 
                   <div
                     className={`px-4 py-3 rounded-2xl text-sm leading-relaxed shadow-sm break-words overflow-hidden ${isUser
-                        ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-tr-sm shadow-cyan-950/40"
-                        : "bg-neutral-900 border border-neutral-800 text-neutral-100 rounded-tl-sm shadow-black/40"
+                      ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-tr-sm shadow-cyan-950/40"
+                      : "bg-neutral-900 border border-neutral-800 text-neutral-100 rounded-tl-sm shadow-black/40"
                       }`}
                   >
                     <ReactMarkdown
@@ -262,7 +262,7 @@ const RoomChat = () => {
       {/* Input Form Bar */}
       <div className="p-4 sm:p-6 pt-2 bg-gradient-to-t from-neutral-950 via-neutral-950/90 to-transparent">
         <div className="max-w-3xl mx-auto">
-          <div className="relative flex items-center bg-neutral-900/90 border border-neutral-700/80 focus-within:border-cyan-400/80 focus-within:ring-1 focus-within:ring-cyan-400/30 rounded-2xl px-4 py-2.5 shadow-xl transition-all">
+          <div className="relative flex items-center bg-neutral-900/90 border border-neutral-700/80 focus-within:border-cyan-400/80 focus-within:ring-1 focus-within:ring-cyan-400/30 rounded-full px-5 py-2.5 shadow-xl transition-all">
             <input
               ref={inputRef}
               type="text"
@@ -274,7 +274,7 @@ const RoomChat = () => {
               className="w-full bg-transparent text-sm text-neutral-100 placeholder-neutral-500 outline-none pr-10"
             />
 
-            <div className="absolute right-2.5 flex items-center">
+            <div className="absolute right-2 flex items-center">
               <AnimatePresence>
                 {input.trim() ? (
                   <motion.button
@@ -283,7 +283,7 @@ const RoomChat = () => {
                     exit={{ opacity: 0, scale: 0.8 }}
                     onClick={() => onSent()}
                     disabled={loading}
-                    className="w-8 h-8 rounded-xl bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-600 text-neutral-950 flex items-center justify-center transition-all cursor-pointer shadow-md disabled:opacity-50"
+                    className="w-9 h-9 rounded-full bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-600 text-neutral-950 flex items-center justify-center transition-all cursor-pointer shadow-md disabled:opacity-50"
                     title="Kirim pesan (Enter)"
                   >
                     <FiSend className="text-sm translate-x-px" />
@@ -291,7 +291,7 @@ const RoomChat = () => {
                 ) : (
                   <button
                     disabled
-                    className="w-8 h-8 rounded-xl bg-neutral-800 text-neutral-600 flex items-center justify-center cursor-not-allowed"
+                    className="w-9 h-9 rounded-full bg-neutral-800 text-neutral-600 flex items-center justify-center cursor-not-allowed"
                   >
                     <FiSend className="text-sm translate-x-px" />
                   </button>
@@ -300,9 +300,9 @@ const RoomChat = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between text-[11px] text-neutral-500 px-2 mt-2">
+          <div className="flex items-center justify-between text-[11px] text-neutral-500 px-4 mt-2">
             <span>
-              💡 Tekan <kbd className="px-1 py-0.5 rounded bg-neutral-800 text-neutral-400 font-mono text-[10px]">Enter</kbd> untuk mengirim
+              💡 Tekan <kbd className="px-1.5 py-0.5 rounded-md bg-neutral-800 text-neutral-400 font-mono text-[10px]">Enter</kbd> untuk mengirim
             </span>
             <span>Bertenaga Gemini 2.0 Flash</span>
           </div>

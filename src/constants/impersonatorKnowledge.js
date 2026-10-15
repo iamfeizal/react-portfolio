@@ -188,6 +188,24 @@ export const IMAM_PERSONA = {
 
   projects: [
     {
+      title: "Jogja Smart Service (JSS) Mobile App",
+      description: "Aplikasi mobile layanan publik resmi Pemerintah Kota Yogyakarta (iOS & Android) dengan lebih dari 100.000+ unduhan di Google Play Store dan App Store. Dibangun menggunakan framework Flutter & Dart dengan arsitektur modular untuk melayani berbagai kebutuhan digital masyarakat.",
+      technologies: ["Flutter", "Dart", "100k+ Downloads", "iOS & Android", "REST API", "Mobile App Development"],
+      github: "https://play.google.com/store/apps/details?id=id.go.jogjakota.jogjasmartservice&pcampaignid=web_share"
+    },
+    {
+      title: "License Plate Recognition OCR Service",
+      description: "Microservice kecerdasan buatan untuk deteksi dan pengenalan plat nomor kendaraan bermotor menggunakan inferensi model PaddleOCR. Di-containerize menggunakan Docker, di-deploy secara asinkron menggunakan Uvicorn dan Flask, serta dilengkapi dokumentasi interaktif API Swagger/Docs.",
+      technologies: ["Python", "PaddleOCR", "Docker", "Uvicorn", "Flask", "Computer Vision", "Microservices"],
+      github: "#"
+    },
+    {
+      title: "SIM Parkir (JSS Integrated Parking System)",
+      description: "Layanan sistem manajemen parkir digital resmi terintegrasi dalam super-app Jogja Smart Service. Dilengkapi integrasi Payment Gateway non-tunai, kalkulasi tarif parkir otomatis, serta konektivitas perangkat keras Bluetooth Thermal Printer untuk mencetak karcis parkir di lapangan.",
+      technologies: ["Flutter", "Dart", "Payment Gateway", "Bluetooth Thermal Printer", "Hardware Integration", "Mobile POS"],
+      github: "https://play.google.com/store/apps/details?id=id.go.jogjakota.jogjasmartservice&pcampaignid=web_share"
+    },
+    {
       title: "CCTV Auto Attendance",
       description: "Sistem presensi kehadiran otomatis real-time berbasis RTSP stream input menggunakan Haar Cascade Classifier dan FaceNet dengan akurasi pengenalan wajah mencapai 89.92%, terintegrasi dengan arsitektur PyTorch dan YOLOv8.",
       technologies: ["Python", "Django", "RTSP", "OpenCV", "PyTorch", "Haar Cascade", "FaceNet", "YOLOv8"],

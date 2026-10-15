@@ -15,8 +15,8 @@ const Experiences = () => {
         <div>
             {EXPERIENCES.map((experience, index) => (
                 <div key={index}>
-                    <a href={experience.link} target="_blank" rel="noopener noreferrer">
-                        <div className='mb-8 flex flex-wrap lg:justify-center'>
+                    <a href={experience.link} target="_blank" rel="noopener noreferrer" className="block">
+                        <div className='mb-8 flex flex-wrap lg:justify-center p-4 sm:p-5 rounded-2xl transition-all duration-300 border border-transparent hover:border-neutral-700/80 hover:bg-neutral-800/60 hover:backdrop-blur-md hover:shadow-xl hover:shadow-black/30'>
                             <motion.div
                             variants={containerLeft(0)}
                             whileInView="visible"
@@ -45,9 +45,9 @@ const Experiences = () => {
                                     )}
                                 </h6>
                                 <p className='mb-4 text-neutral-400'>{experience.description || experience.descripction}</p>
-                                <div>
+                                <div className='flex flex-wrap gap-1.5'>
                                     {experience.skills.map((skill, index) => (
-                                        <span key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-cyan-500'>{skill}</span>
+                                        <span key={index} className='rounded-full bg-neutral-900/90 border border-neutral-800 px-3 py-1 text-xs font-medium text-cyan-400 shadow-sm'>{skill}</span>
                                     ))}
                                 </div>
                             </motion.div>

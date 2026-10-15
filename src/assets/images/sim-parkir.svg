@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="spBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a101d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Emerald-Cyan Accent Gradient -->
+    <linearGradient id="spEmeraldCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="60%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <!-- Device Body Gradient -->
+    <linearGradient id="spDeviceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Screen Gradient -->
+    <linearGradient id="spScreenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1322" />
+      <stop offset="100%" stop-color="#050a14" />
+    </linearGradient>
+
+    <!-- Card Gradient -->
+    <linearGradient id="spCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <!-- Radial Ambient Glow -->
+    <radialGradient id="spAmbientGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.28" />
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="spShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+
+    <filter id="spGlowFilter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="400" height="400" rx="32" fill="url(#spBgGrad)" />
+  
+  <!-- Subtle Background Grid Pattern -->
+  <g opacity="0.07" stroke="#38bdf8" stroke-width="1">
+    <line x1="40" y1="0" x2="40" y2="400" />
+    <line x1="120" y1="0" x2="120" y2="400" />
+    <line x1="200" y1="0" x2="200" y2="400" />
+    <line x1="280" y1="0" x2="280" y2="400" />
+    <line x1="360" y1="0" x2="360" y2="400" />
+    <line x1="0" y1="60" x2="400" y2="60" />
+    <line x1="0" y1="140" x2="400" y2="140" />
+    <line x1="0" y1="220" x2="400" y2="220" />
+    <line x1="0" y1="300" x2="400" y2="300" />
+    <line x1="0" y1="380" x2="400" y2="380" />
+  </g>
+
+  <!-- Ambient Backdrop Glow -->
+  <circle cx="200" cy="180" r="160" fill="url(#spAmbientGlow)" />
+
+  <!-- Outer Glass Border -->
+  <rect x="12" y="12" width="376" height="376" rx="24" fill="none" stroke="url(#spEmeraldCyan)" stroke-width="1.5" opacity="0.4" />
+
+  <!-- MAIN GRAPHIC: POS Hardware Terminal & Smart Parking -->
+  <g transform="translate(200, 195)" filter="url(#spShadow)">
+    
+    <!-- Thermal Paper Receipt Ejecting from top -->
+    <g transform="translate(0, -95)">
+      <!-- Receipt Paper Body -->
+      <path d="M -42 0 L -42 -55 L -36 -51 L -30 -55 L -24 -51 L -18 -55 L -12 -51 L -6 -55 L 0 -51 L 6 -55 L 12 -51 L 18 -55 L 24 -51 L 30 -55 L 36 -51 L 42 -55 L 42 0 Z" 
+            fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <!-- Receipt Content lines -->
+      <rect x="-32" y="-42" width="64" height="4" rx="2" fill="#0f172a" />
+      <rect x="-32" y="-34" width="44" height="3" rx="1.5" fill="#64748b" />
+      <rect x="-32" y="-27" width="56" height="3" rx="1.5" fill="#94a3b8" />
+      <!-- Barcode simulation -->
+      <g transform="translate(-28, -18)" fill="#0f172a">
+        <rect x="0" y="0" width="3" height="12" />
+        <rect x="5" y="0" width="1.5" height="12" />
+        <rect x="8" y="0" width="4" height="12" />
+        <rect x="14" y="0" width="2" height="12" />
+        <rect x="18" y="0" width="1.5" height="12" />
+        <rect x="22" y="0" width="3" height="12" />
+        <rect x="27" y="0" width="2" height="12" />
+        <rect x="31" y="0" width="4" height="12" />
+        <rect x="38" y="0" width="2" height="12" />
+        <rect x="42" y="0" width="3" height="12" />
+        <rect x="47" y="0" width="1.5" height="12" />
+        <rect x="51" y="0" width="3" height="12" />
+      </g>
+    </g>
+
+    <!-- POS Terminal Device Frame -->
+    <rect x="-65" y="-95" width="130" height="195" rx="18" fill="url(#spDeviceGrad)" stroke="#334155" stroke-width="2.5" />
+    
+    <!-- Paper Feed Dispenser Head -->
+    <rect x="-48" y="-94" width="96" height="8" rx="4" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5" />
+    <circle cx="-38" cy="-90" r="2.5" fill="#10b981" />
+    <circle cx="38" cy="-90" r="2.5" fill="#38bdf8" />
+
+    <!-- Terminal Screen -->
+    <rect x="-53" y="-76" width="106" height="135" rx="10" fill="url(#spScreenGrad)" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- SCREEN UI: Parking System Header -->
+    <g transform="translate(0, -62)">
+      <!-- Parking Emblem Circle -->
+      <circle cx="-32" cy="5" r="14" fill="#0f172a" stroke="url(#spEmeraldCyan)" stroke-width="2" />
+      <text x="-32" y="11" text-anchor="middle" fill="#10b981" font-family="system-ui, sans-serif" font-size="16" font-weight="900">P</text>
+      
+      <!-- Header text -->
+      <text x="-12" y="2" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="10.5" font-weight="800">SIM PARKIR</text>
+      <text x="-12" y="12" fill="#06b6d4" font-family="system-ui, sans-serif" font-size="7.5" font-weight="600" letter-spacing="0.5">JOGJA SMART SERVICE</text>
+    </g>
+
+    <!-- SCREEN UI: Vehicle Slot & Tariff Card -->
+    <g transform="translate(0, -28)">
+      <rect x="-45" y="0" width="90" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="-38" y="13" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="8" font-weight="500">KENDARAAN</text>
+      <text x="-38" y="24" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">MOBIL • AB 1234</text>
+      <rect x="18" y="7" width="22" height="16" rx="4" fill="#06b6d4" opacity="0.2" />
+      <text x="29" y="18" text-anchor="middle" fill="#22d3ee" font-family="system-ui, sans-serif" font-size="8" font-weight="700">POS</text>
+    </g>
+
+    <!-- SCREEN UI: Payment Status Badge -->
+    <g transform="translate(0, 16)">
+      <rect x="-45" y="0" width="90" height="26" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1" />
+      <circle cx="-33" cy="13" r="5" fill="#10b981" />
+      <path d="M -35 13 L -33 15 L -30 11" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="-22" y="12" fill="#34d399" font-family="system-ui, sans-serif" font-size="8" font-weight="700">PAYMENT SUCCESS</text>
+      <text x="-22" y="21" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="7" font-weight="500">QRIS / CASHLESS</text>
+    </g>
+
+    <!-- Terminal Keypad / Bottom Bar -->
+    <g transform="translate(0, 68)">
+      <rect x="-45" y="0" width="90" height="14" rx="4" fill="#0f172a" />
+      <circle cx="-30" cy="7" r="3" fill="#334155" />
+      <circle cx="-10" cy="7" r="3" fill="#334155" />
+      <circle cx="10" cy="7" r="3" fill="#334155" />
+      <circle cx="30" cy="7" r="3" fill="#10b981" />
+    </g>
+
+    <!-- FLOATING PAYMENT CARD (Left Side) -->
+    <g transform="translate(-75, 20) rotate(-14)" filter="url(#spGlowFilter)">
+      <rect x="-38" y="-24" width="76" height="48" rx="8" fill="url(#spCardGrad)" stroke="#38bdf8" stroke-width="1.5" />
+      <!-- Chip -->
+      <rect x="-28" y="-12" width="14" height="11" rx="2" fill="#fbbf24" stroke="#f59e0b" stroke-width="0.8" />
+      <!-- Contactless waves -->
+      <path d="M 16 -12 C 20 -8, 20 -2, 16 2" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.8" />
+      <path d="M 21 -15 C 27 -9, 27 1, 21 7" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
+      <text x="-28" y="16" fill="#f8fafc" font-family="'Courier New', monospace" font-size="8" font-weight="700">•••• 8824</text>
+    </g>
+
+    <!-- BLUETOOTH THERMAL PRINTER BADGE (Right Side) -->
+    <g transform="translate(74, 18) rotate(10)" filter="url(#spGlowFilter)">
+      <!-- Badge Body -->
+      <rect x="-28" y="-24" width="56" height="48" rx="10" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5" />
+      <!-- Bluetooth Icon -->
+      <g transform="translate(0, -5)">
+        <circle cx="0" cy="0" r="14" fill="#0369a1" opacity="0.3" />
+        <path d="M -3 -6 L 4 1 L 0 5 L 0 -11 L 4 -7 L -3 0" 
+              fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <text x="0" y="16" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="7" font-weight="700" letter-spacing="0.5">BLUETOOTH</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM SLEEK LABEL PILL -->
+  <g transform="translate(200, 350)">
+    <rect x="-105" y="-16" width="210" height="32" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <circle cx="-85" cy="0" r="5" fill="#10b981" />
+    <text x="-70" y="4.5" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.5">SIM PARKIR POS</text>
+    <rect x="36" y="-8" width="58" height="16" rx="8" fill="#06b6d4" opacity="0.2" />
+    <text x="65" y="3.5" text-anchor="middle" fill="#22d3ee" font-family="system-ui, sans-serif" font-size="8.5" font-weight="800">FLUTTER</text>
+  </g>
+</svg>

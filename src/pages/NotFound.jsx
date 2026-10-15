@@ -15,7 +15,7 @@ const NotFound = () => {
       <p className="mt-4 text-lg text-gray-400 max-w-md">
         The page you’re looking for doesn’t exist or has been moved.
       </p>
-        <button onClick={() => navigate("/")} className="mt-8 my-10 max-w-xl bg-transparent hover:bg-cyan-500 text-cyan-300 font-semibold hover:text-neutral-300 py-2 px-6 border border-cyan-300 hover:border-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 rounded inline-flex transition-all duration-300">
+        <button onClick={() => navigate("/")} className="mt-8 my-10 max-w-xl bg-transparent hover:bg-cyan-500 text-cyan-300 font-semibold hover:text-neutral-950 py-3 px-8 border border-cyan-300 hover:border-transparent focus:ring-4 focus:outline-none focus:ring-cyan-300/40 shadow-lg shadow-cyan-500/30 rounded-full inline-flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
           Go Back Home
         </button>
     </div>

@@ -54,7 +54,7 @@ const Hero = () => {
                                         whileInView="visible"
                                         initial="hidden"
                                         transition="transition"
-                                        className="my-10 max-w-xl bg-transparent interactive-bg-blue text-cyan-300 font-semibold py-2 px-4 border border-cyan-300 hover:border-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 rounded inline-flex cursor-pointer">
+                                        className="my-10 max-w-xl bg-transparent interactive-bg-blue text-cyan-300 font-semibold py-2.5 px-6 border border-cyan-300 hover:border-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 rounded-full inline-flex cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95">
                                         Download CV
                                     </motion.button>
                                 </a>
@@ -64,7 +64,7 @@ const Hero = () => {
                                     whileInView="visible"
                                     initial="hidden"
                                     transition="transition"
-                                    className="my-10 max-w-xl bg-transparent interactive-bg-blue text-cyan-300 font-semibold py-2 px-4 border border-cyan-300 hover:border-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 rounded inline-flex cursor-pointer">
+                                    className="my-10 max-w-xl bg-transparent interactive-bg-blue text-cyan-300 font-semibold py-2.5 px-6 border border-cyan-300 hover:border-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 rounded-full inline-flex cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95">
                                     Chat with AI Assistant
                                 </motion.button>
                             </div>
@@ -78,7 +78,7 @@ const Hero = () => {
                             whileInView="visible"
                             initial="hidden"
                             transition="transition"
-                            className="rounded-2xl" src={profilePic} alt="Imam Agus Faisal" />
+                            className="rounded-3xl shadow-2xl border border-neutral-800/80" src={profilePic} alt="Imam Agus Faisal" />
                     </div>
                 </div>
             </div>

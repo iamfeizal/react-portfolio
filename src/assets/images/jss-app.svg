@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="jssBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="jssCyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="jssGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.05" />
+    </linearGradient>
+    <filter id="jssBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="300" rx="24" fill="url(#jssBg)" stroke="#1e293b" stroke-width="2" />
+  <rect x="8" y="8" width="284" height="284" rx="18" fill="url(#jssGlow)" stroke="url(#jssCyanBlue)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.6" />
+
+  <!-- Center Graphic: Mobile Device & City App Icons -->
+  <g transform="translate(150, 115)">
+    <!-- Glow -->
+    <circle r="46" fill="#0284c7" opacity="0.15" filter="url(#jssBlur)" />
+    
+    <!-- Phone Mockup -->
+    <rect x="-34" y="-45" width="68" height="90" rx="10" fill="#0f172a" stroke="url(#jssCyanBlue)" stroke-width="2" />
+    <!-- Phone Speaker notch -->
+    <line x1="-10" y1="-38" x2="10" y2="-38" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- App UI Blocks inside phone -->
+    <rect x="-24" y="-30" width="48" height="12" rx="4" fill="#0284c7" opacity="0.4" />
+    <circle cx="-16" cy="-24" r="3" fill="#38bdf8" />
+    <rect x="-8" y="-26" width="28" height="4" rx="2" fill="#7dd3fc" />
+    
+    <!-- Service Grid in App -->
+    <rect x="-24" y="-12" width="21" height="18" rx="4" fill="#1e293b" stroke="#0ea5e9" stroke-width="1" />
+    <circle cx="-13" cy="-3" r="4" fill="#06b6d4" />
+    <rect x="3" y="-12" width="21" height="18" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+    <path d="M 10 -6 L 17 -6 L 13.5 0 Z" fill="#60a5fa" />
+
+    <rect x="-24" y="10" width="48" height="16" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="-16" cy="18" r="3" fill="#22c55e" />
+    <rect x="-8" y="16" width="30" height="4" rx="2" fill="#94a3b8" />
+    
+    <!-- 100k+ Badge -->
+    <g transform="translate(24, -36)">
+      <rect x="-14" y="-8" width="28" height="16" rx="8" fill="#059669" stroke="#34d399" stroke-width="1" />
+      <text x="0" y="3.5" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="8" font-weight="700">100k+</text>
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <text x="150" y="210" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" letter-spacing="0.5">
+    Jogja Smart Service
+  </text>
+  <text x="150" y="234" text-anchor="middle" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="1">
+    FLUTTER • DART • 100K+ DOWNLOADS
+  </text>
+  <text x="150" y="262" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11">
+    Public Service Mobile Ecosystem
+  </text>
+</svg>
