@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="hrBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="purplePink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+    <linearGradient id="hrGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05" />
+    </linearGradient>
+    <filter id="blurGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="300" rx="24" fill="url(#hrBgGrad)" stroke="#1e293b" stroke-width="2" />
+  <rect x="8" y="8" width="284" height="284" rx="18" fill="url(#hrGlow)" stroke="url(#purplePink)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.6" />
+
+  <!-- Central Graphic: Dashboard & Analytics Graph -->
+  <g transform="translate(150, 115)">
+    <!-- Glow circle -->
+    <circle r="46" fill="#7c3aed" opacity="0.15" filter="url(#blurGlow)" />
+    
+    <!-- Dashboard Window Outline -->
+    <rect x="-42" y="-36" width="84" height="68" rx="8" fill="#0f172a" stroke="url(#purplePink)" stroke-width="2" />
+    <!-- Top Bar -->
+    <line x1="-42" y1="-22" x2="42" y2="-22" stroke="#334155" stroke-width="1.5" />
+    <circle cx="-32" cy="-29" r="2.5" fill="#f43f5e" />
+    <circle cx="-24" cy="-29" r="2.5" fill="#eab308" />
+    <circle cx="-16" cy="-29" r="2.5" fill="#22c55e" />
+
+    <!-- Chart Bars -->
+    <rect x="-30" y="5" width="8" height="18" rx="2" fill="#38bdf8" />
+    <rect x="-18" y="-5" width="8" height="28" rx="2" fill="#818cf8" />
+    <rect x="-6" y="-14" width="8" height="37" rx="2" fill="#c084fc" />
+    <rect x="6" y="-2" width="8" height="25" rx="2" fill="#f472b6" />
+    <rect x="18" y="-9" width="8" height="32" rx="2" fill="#22d3ee" />
+
+    <!-- Trend line -->
+    <path d="M -26 3 L -14 -8 L -2 -17 L 10 -4 L 22 -12" fill="none" stroke="#facc15" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="22" cy="-12" r="3" fill="#facc15" />
+  </g>
+
+  <!-- Typography -->
+  <text x="150" y="210" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" letter-spacing="0.5">
+    HR Analytics Dashboard
+  </text>
+  <text x="150" y="234" text-anchor="middle" fill="#c084fc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" letter-spacing="1">
+    METABASE • POSTGRESQL • ML
+  </text>
+  <text x="150" y="262" text-anchor="middle" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="11">
+    Employee Churn & Retention Model
+  </text>
+</svg>

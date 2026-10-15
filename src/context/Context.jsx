@@ -1,58 +1,85 @@
 import { createContext, useState } from "react";
+import PropTypes from "prop-types";
 import runChat from "../config/gemini";
 
 export const Context = createContext();
 
-const ContextProvider = (props) => {
+const INITIAL_GREETING = {
+  sender: "bot",
+  text: "Halo! Saya **Imam Agus Faisal** (versi AI). Senang bertemu dengan Anda! Ada yang ingin Anda ketahui seputar pengalaman kerja, proyek Machine Learning, atau keahlian teknis saya?",
+  time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+};
+
+const ContextProvider = ({ children }) => {
   const [input, setInput] = useState("");
   const [recentPrompt, setRecentPrompt] = useState("");
-  const [prevPrompts, setPrevPromts] = useState([]);
+  const [prevPrompts, setPrevPrompts] = useState([]);
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
   const [resultData, setResultData] = useState("");
-  const [chatHistory, setChatHistory] = useState([
-    { sender: "bot", text: "Halo, ada yang bisa saya bantu?" }
-  ]);
+  const [chatHistory, setChatHistory] = useState([INITIAL_GREETING]);
 
   const newChat = () => {
     setLoading(false);
     setShowResult(false);
+    setInput("");
+    setResultData("");
     setChatHistory([
-      { sender: "bot", text: "Halo, ada yang bisa saya bantu?" }
+      {
+        ...INITIAL_GREETING,
+        time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+      },
     ]);
   };
 
   const onSent = async (prompt) => {
+    const userPrompt = (prompt ?? input).trim();
+    if (!userPrompt || loading) return;
+
     setInput("");
-    setResultData(""); // clear temp result text
+    setResultData("");
     setLoading(true);
     setShowResult(true);
 
-    const userPrompt = prompt ?? input;
+    const currentTime = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 
-    // Simpan prompt ke history
-    setChatHistory((prev) => [...prev, { sender: "user", text: userPrompt }]);
+    // Snapshot current history before adding the new user message
+    const previousHistory = [...chatHistory];
+
+    // Add user message to UI state immediately
+    const newUserMsg = { sender: "user", text: userPrompt, time: currentTime };
+    setChatHistory((prev) => [...prev, newUserMsg]);
     setRecentPrompt(userPrompt);
-    setPrevPromts((prev) => [...prev, userPrompt]);
+    setPrevPrompts((prev) => [...prev, userPrompt]);
 
     try {
-      const response = await runChat(userPrompt);
+      const response = await runChat(userPrompt, previousHistory);
+      const botTime = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 
-      // Simpan response dari bot
-      setChatHistory((prev) => [...prev, { sender: "bot", text: response }]);
+      setChatHistory((prev) => [
+        ...prev,
+        { sender: "bot", text: response, time: botTime },
+      ]);
       setResultData(response);
-    } catch (error) {
-      const errorMsg = "Can\'t connect to the server :(";
-      setChatHistory((prev) => [...prev, { sender: "bot", text: errorMsg }]);
+    } catch {
+      const errorMsg = "Maaf, terjadi kesalahan saat memproses respon.";
+      setChatHistory((prev) => [
+        ...prev,
+        {
+          sender: "bot",
+          text: errorMsg,
+          time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+        },
+      ]);
       setResultData(errorMsg);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   const contextValue = {
     prevPrompts,
-    setPrevPromts,
+    setPrevPrompts,
     onSent,
     setRecentPrompt,
     recentPrompt,
@@ -66,11 +93,11 @@ const ContextProvider = (props) => {
     setChatHistory,
   };
 
-  return (
-    <Context.Provider value={contextValue}>
-      {props.children}
-    </Context.Provider>
-  );
+  return <Context.Provider value={contextValue}>{children}</Context.Provider>;
+};
+
+ContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default ContextProvider;

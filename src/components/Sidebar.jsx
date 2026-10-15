@@ -1,11 +1,10 @@
-import React from 'react'
 import logo from "../assets/logo.svg";
 import { LuChevronFirst } from "react-icons/lu";
 import { useState } from 'react';
-import { FiMoreVertical, FiMail } from 'react-icons/fi';
+import { FiMail } from 'react-icons/fi';
 import { FaArrowLeft, FaRegFilePdf } from 'react-icons/fa';
 import { useNavigate } from "react-router-dom"
-import cv from "../assets/CV_ImamAF_Short.pdf"
+import cv from "../assets/CV_IMAM AGUS FAISAL.pdf"
 
 const Sidebar = () => {
   const navigate = useNavigate()
